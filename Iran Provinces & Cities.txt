@@ -1,43 +1,69 @@
--- phpMyAdmin SQL Dump
--- version 4.0.0
--- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: May 27, 2013 at 04:57 PM
--- Server version: 6.6.30-log
--- PHP Version: 6.4.15
-
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
+-- Table structure for table `province`
 --
--- Database: `iran_cities`
---
+
+------------------INSERT MYSQL version-----------------------------
+
+INSERT INTO `province` (`id`, `name`) VALUES
+
+-------------------------------INSERT PostgresSQL version------------------------
+
+INSERT INTO provinces (id, name) VALUES
+
+
+
+(1, 'آذربایجان شرقی'),
+(2, 'آذربایجان غربی'),
+(3, 'اردبیل'),
+(4, 'اصفهان'),
+(5, 'البرز'),
+(6, 'ایلام'),
+(7, 'بوشهر'),
+(8, 'تهران'),
+(9, 'چهارمحال بختیاری'),
+(10, 'خراسان جنوبی'),
+(11, 'خراسان رضوی'),
+(12, 'خراسان شمالی'),
+(13, 'خوزستان'),
+(14, 'زنجان'),
+(15, 'سمنان'),
+(16, 'سیستان و بلوچستان'),
+(17, 'فارس'),
+(18, 'قزوین'),
+(19, 'قم'),
+(20, 'کردستان'),
+(21, 'کرمان'),
+(22, 'کرمانشاه'),
+(23, 'کهکیلویه و بویراحمد'),
+(24, 'گلستان'),
+(25, 'گیلان'),
+(26, 'لرستان'),
+(27, 'مازندران'),
+(28, 'مرکزی'),
+(29, 'هرمزگان'),
+(30, 'همدان'),
+(31, 'یزد');
 
 -- --------------------------------------------------------
+
+
+
 
 --
 -- Table structure for table `city`
 --
 
-CREATE TABLE IF NOT EXISTS `city` (
-`id` int(12) unsigned NOT NULL AUTO_INCREMENT,
-`province_id` int(12) unsigned NOT NULL,
-`name` varchar(200) NOT NULL,
-PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=441 ;
+-----------INSERT MySQL version-----------------
 
---
--- Dumping data for table `city`
---
+INSERT INTO `cities` (`id`, `province_id`, `name`) VALUES
 
-INSERT INTO `city` (`id`, `province_id`, `name`) VALUES
+
+-----------INSERT PostgresSQL version------------------------------
+
+INSERT INTO cities (id, province_id, name) VALUES
+
+
+
 (1, 1, 'تبریز'),
 (2, 1, 'کندوان'),
 (3, 1, 'بندر شرفخانه'),
@@ -480,53 +506,6 @@ INSERT INTO `city` (`id`, `province_id`, `name`) VALUES
 (440, 31, 'زارچ');
 
 -- --------------------------------------------------------
-
---
--- Table structure for table `province`
---
-
-CREATE TABLE IF NOT EXISTS `province` (
-`id` int(12) unsigned NOT NULL AUTO_INCREMENT,
-`name` varchar(100) NOT NULL,
-PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=32 ;
-
---
--- Dumping data for table `province`
---
-
-INSERT INTO `province` (`id`, `name`) VALUES
-(1, 'آذربایجان شرقی'),
-(2, 'آذربایجان غربی'),
-(3, 'اردبیل'),
-(4, 'اصفهان'),
-(5, 'البرز'),
-(6, 'ایلام'),
-(7, 'بوشهر'),
-(8, 'تهران'),
-(9, 'چهارمحال بختیاری'),
-(10, 'خراسان جنوبی'),
-(11, 'خراسان رضوی'),
-(12, 'خراسان شمالی'),
-(13, 'خوزستان'),
-(14, 'زنجان'),
-(15, 'سمنان'),
-(16, 'سیستان و بلوچستان'),
-(17, 'فارس'),
-(18, 'قزوین'),
-(19, 'قم'),
-(20, 'کردستان'),
-(21, 'کرمان'),
-(22, 'کرمانشاه'),
-(23, 'کهکیلویه و بویراحمد'),
-(24, 'گلستان'),
-(25, 'گیلان'),
-(26, 'لرستان'),
-(27, 'مازندران'),
-(28, 'مرکزی'),
-(29, 'هرمزگان'),
-(30, 'همدان'),
-(31, 'یزد');
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
